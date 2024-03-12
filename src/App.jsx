@@ -6,14 +6,14 @@ import Form from './components/Form/Form';
 import Todo from './components/Todo/Todo';
 
 //import additional data
-import { initialState, ACTION } from './services/constant.data';
+import { initialState } from './services/constant.data';
 import { todoReducer } from './services/reducer.functions';
 
 function App() {
   const [todos, dispatch] = useReducer(todoReducer, initialState)
 
   const todoList = todos.map((todo) => {
-    return <Todo key={todo.id} todo={todo} />
+    return <Todo key={todo.id} todo={todo} dispatch={dispatch} />
   });
   return (
     <>

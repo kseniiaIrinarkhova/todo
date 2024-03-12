@@ -121,9 +121,9 @@ const initialState = [
     }
 ];
 
-const ACTION = {
+const ACTIONS = {
 ADD_TODO: "add-todo",
 TOGGLE_TODO: "toggle-todo"
 }
 
-export {initialState, ACTION};
+export {initialState, ACTIONS};

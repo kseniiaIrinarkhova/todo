@@ -1,5 +1,5 @@
 import './Form.css'
-import { ACTION } from '../../services/constant.data';
+import { ACTIONS } from '../../services/constant.data';
 import { useState } from 'react';
 
 export default function Form({dispatch }) {
@@ -9,7 +9,7 @@ export default function Form({dispatch }) {
   function handleSubmit(e) {
     e.preventDefault();
     //add new todo
-    dispatch({ type: ACTION.ADD_TODO, payload: {title: title}  })
+    dispatch({ type: ACTIONS.ADD_TODO, payload: {title: title}  })
     //clean input 
     setTitle('');
   }
