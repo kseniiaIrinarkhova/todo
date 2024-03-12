@@ -7,18 +7,18 @@ import Todo from './components/Todo/Todo';
 
 //import additional data
 import { initialState, ACTION } from './services/constant.data';
+import { todoReducer } from './services/reducer.functions';
 
 function App() {
-  const [todos, dispatch] = useReducer(reducer, initialState)
-  const [title, setTitle] = useState('')
+  const [todos, dispatch] = useReducer(todoReducer, initialState)
 
-  const todoList = initialState.map((todo) => {
-    return <Todo todo={todo} />
+  const todoList = todos.map((todo) => {
+    return <Todo key={todo.id} todo={todo} />
   });
   return (
     <>
       <h1>My todo list</h1>
-      <Form title={title} setTitle={setTitle} />
+      <Form dispatch={dispatch} />
       <div className="list">
         {todoList}
       </div>
@@ -27,10 +27,3 @@ function App() {
 }
 
 export default App
-
-
-//functions
-
-function reducer(state, action) {
-
-}

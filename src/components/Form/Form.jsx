@@ -1,9 +1,24 @@
 import './Form.css'
+import { ACTION } from '../../services/constant.data';
+import { useState } from 'react';
 
-export default function Form({title, setTitle}) {
+export default function Form({dispatch }) {
+  const [title, setTitle] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    //add new todo
+    dispatch({ type: ACTION.ADD_TODO, payload: {title: title}  })
+    //clean input 
+    setTitle('');
+  }
+
+
   return (
-    <form>
-      <input type="text" value={title} onChange={(e) => setTitle(e.target.value) }/>
+    <form onSubmit={handleSubmit}>
+      <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
     </form>
   )
 }
+
+

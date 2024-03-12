@@ -122,7 +122,7 @@ const initialState = [
 ];
 
 const ACTION = {
-
+ADD_TODO: "add-todo"
 }
 
 export {initialState, ACTION};
