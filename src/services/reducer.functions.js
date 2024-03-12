@@ -11,6 +11,8 @@ function todoReducer(todos, action) {
                 }
                 return todo;
             }));
+        case ACTIONS.DELETE_TODO:
+            return todos.filter((todo) =>  todo.id !== action.payload.id );
         default:
             throw Error("Unknown Action: " + action.type);
 

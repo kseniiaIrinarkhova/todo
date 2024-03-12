@@ -23,7 +23,7 @@ export default function Todo({ todo, dispatch }) {
         <input id={todo.id} type="checkbox" name="completed" checked={isCompleted} onChange={handleToggling} />
         <label htmlFor={todo.id} className={todo.completed ? "todo completed" : "todo"}>{todo.title}</label>
         <button className='edit-btn'>Edit</button>
-        <button className='delete-btn' disabled={isDisabled}>Delete</button>
+        <button className='delete-btn' disabled={isDisabled} onClick={(e) => { dispatch({ type: ACTIONS.DELETE_TODO, payload: { id: todo.id } }) }}>Delete</button>
       </div>
     </>
   )
