@@ -7,8 +7,6 @@ function todoReducer(todos, action) {
         case ACTIONS.TOGGLE_TODO:
             return todos.map((todo => {
                 if (todo.id == action.payload.id) {
-                    // todo.completed = !todo.completed;
-                    // console.log(todo)
                     return {...todo, completed: !todo.completed};
                 }
                 return todo;
