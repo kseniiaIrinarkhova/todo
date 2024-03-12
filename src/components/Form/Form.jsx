@@ -1,7 +1,9 @@
 import './Form.css'
 
-export default function Form() {
+export default function Form({title, setTitle}) {
   return (
-    <div>Form</div>
+    <form>
+      <input type="text" value={title} onChange={(e) => setTitle(e.target.value) }/>
+    </form>
   )
 }
