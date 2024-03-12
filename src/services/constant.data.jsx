@@ -122,7 +122,8 @@ const initialState = [
 ];
 
 const ACTION = {
-ADD_TODO: "add-todo"
+ADD_TODO: "add-todo",
+TOGGLE_TODO: "toggle-todo"
 }
 
 export {initialState, ACTION};
