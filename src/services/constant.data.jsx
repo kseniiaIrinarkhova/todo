@@ -127,4 +127,9 @@ TOGGLE_TODO: "toggle-todo",
 DELETE_TODO: "delete-todo"
 }
 
-export {initialState, ACTIONS};
+const BTN_TYPE = {
+    SUBMIT: "submit",
+    BUTTON: "button"
+}
+
+export {initialState, ACTIONS, BTN_TYPE};
