@@ -1,0 +1,6 @@
+form{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 50px;
+}

@@ -122,9 +122,11 @@ const initialState = [
 ];
 
 const ACTIONS = {
-ADD_TODO: "add-todo",
-TOGGLE_TODO: "toggle-todo",
-DELETE_TODO: "delete-todo"
+ADD_TODO: "Add",
+TOGGLE_TODO: "Toggle",
+DELETE_TODO: "Delete",
+EDIT_TODO: "Edit",
+SAVE_TODO: "Save"
 }
 
 const BTN_TYPE = {
