@@ -26,6 +26,7 @@ function todoReducer(todos, action) {
                     let changedTodo= {...todo}
                     delete changedTodo.beenEdited;
                     changedTodo.title = action.payload.title;
+                    changedTodo.completed = false;
                     return changedTodo;
                 }
                 return todo;

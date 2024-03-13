@@ -18,9 +18,6 @@ function App() {
       <Form dispatch={dispatch} todo_title={todo.title} id={todo.id}>Edit</Form> : 
         <Todo todo={todo} dispatch={dispatch} />
       }</div>
-    // if ('beenEdited' in todo)
-    //   return <Form key={todo.id} dispatch={dispatch} todo_title={todo.title} id={todo.id}>Save</Form>
-    // return <Todo key={todo.id} todo={todo} dispatch={dispatch} />
     return todoItem;
   });
   return (
